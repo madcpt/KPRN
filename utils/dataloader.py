@@ -19,11 +19,20 @@ class DataLoader(object):
         #     self.id2user = json.loads(f.read())
         # with open('data/kkbox/preprocessed/user2id.dict', 'r', encoding='utf-8') as f:
         #     self.user2id = json.loads(f.read())
+    
+    def load_interactions_directed(self):
         with open('data/kkbox/preprocessed/interactions.txt', 'r', encoding='utf-8') as f:
-            self.interactions = []
+            self.interactions = set()
             for line in tqdm(f, total=7377420):
                 t = line.split()
-                self.interactions.append(t)
+                self.interactions.add(t)
+
+    def load_kg_triples_directed(self):
+        with open('data/kkbox/preprocessed/kg_triples.txt', 'r', encoding='utf-8') as f:
+            self.kg_triples = set()
+            for line in tqdm(f, total=7377420):
+                t = line.split()
+                self.kg_triples.add(t)
 
     def get(self, target_dict:str, item):
         try:
