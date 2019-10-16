@@ -1,6 +1,15 @@
 dataset: 'kkbox'
 
-dataset_folder: 'data\'
+dataset_folder: 'data/kkbox/'
 
+type_id: ['user', 'song', 'genre_ids', 'artist_name', 'composer']
+type_id_simple: ['u', 's', 'g', 'a', 'c']
 
+id2entity: 'id2entity.dict'
+entity2id: 'entity2id.dict'
+id2type: 'id2type.dict'
+id2user: 'id2user.dict'
+user2id: 'user2id.dict'
+triples: 'triples.txt'
 
+user_num: 34403
