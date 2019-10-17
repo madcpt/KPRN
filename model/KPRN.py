@@ -33,3 +33,4 @@ class KPRN(nn.Module):
 if __name__ == "__main__":
     net = KPRN(entity_size=100, relation_size=10, embed_dim=20, rnn_hidden_size=10,
                 rnn_num_layers=2, linear_hidden_size=5)
+    print(net)
